@@ -1,0 +1,31 @@
+{
+  "name": "lorem-picsum-wallpaper",
+  "version": "0.0.0",
+  "description": "Lorem Ipsum... but for wallpapers",
+  "license": "MIT",
+  "repository": "the-pat/lorem-picsum-wallpaper",
+  "author": {
+    "name": "Patrick Tone",
+    "email": "pt@patrickt.one",
+    "url": "patrickt.one"
+  },
+  "engines": {
+    "node": ">=7.6"
+  },
+  "scripts": {},
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "images",
+    "lorem",
+    "picsum",
+    "wallpaper",
+    "background"
+  ],
+  "dependencies": {
+    "image-download": "^1.0.1",
+    "image-type": "^3.0.0",
+    "wallpaper": "^2.5.0"
+  }
+}
