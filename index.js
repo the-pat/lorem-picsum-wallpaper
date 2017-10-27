@@ -18,13 +18,19 @@ module.exports = async(options) => {
     const url = `https://picsum.photos/${options.width}/${options.height}/?random`;
     const buffer = await imageDownload(url);
     const type = imageType(buffer);
-    const imagePath = path.join(options.dir, 'random.' + type.ext);console.log(imagePath)
+    const imagePath = path.join(options.dir, 'random.' + type.ext);
     
-    fs.writeFile(imagePath, buffer, (err) => {
+    const err = await new Promise((resolve, reject) => fs.writeFile(imagePath, buffer, (err) => {
         if (err) {
-            throw new Error(err);
+            return reject(err);
         }
-    });
 
-    await wallpaper.set(imagePath, options.scale);
+        return resolve();
+    }));
+
+    if (err) {
+        throw new Error(err);
+    }
+
+    await wallpaper.set(imagePath, { scale: options.scale });
 };
