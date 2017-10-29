@@ -26,7 +26,7 @@ loremPicsum(options).then(() => console.log('done!'));
 
 ### loremPicsum(options)
 
-Returns a `Promise`.
+Returns a `Promise<void>`.
 
 #### options
 
@@ -36,7 +36,7 @@ Type: `object`
 
 Type: `string`
 
-Default: `'./'`
+Default: `<__dirname>/.wallpaper`
 
 ##### width
 

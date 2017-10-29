@@ -7,9 +7,9 @@ const path = require('path');
 const wallpaper = require('wallpaper');
 
 const defaults = {
-    dir: './',
+    dir: path.join(__dirname, '.wallpaper'),
     width: 1920,
-    height: 1080
+    height: 1080,
 };
 
 module.exports = async(options) => {
