@@ -21,6 +21,8 @@ module.exports = async(options) => {
     const type = imageType(buffer);
     const imagePath = path.join(options.dir, 'random.' + type.ext);
     
+    await makeDir(options.dir);
+
     const err = await new Promise((resolve, reject) => fs.writeFile(imagePath, buffer, (err) => {
         if (err) {
             return reject(err);
@@ -33,6 +35,5 @@ module.exports = async(options) => {
         throw new Error(err);
     }
 
-    await makeDir(options.dir);
     await wallpaper.set(imagePath, { scale: options.scale });
 };
