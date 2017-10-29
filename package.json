@@ -26,6 +26,7 @@
   "dependencies": {
     "image-download": "^1.0.1",
     "image-type": "^3.0.0",
+    "make-dir": "^1.1.0",
     "wallpaper": "^2.5.0"
   }
 }

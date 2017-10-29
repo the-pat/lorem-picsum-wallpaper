@@ -3,6 +3,7 @@
 const fs = require('fs');
 const imageDownload = require('image-download');
 const imageType = require('image-type');
+const makeDir = require('make-dir');
 const path = require('path');
 const wallpaper = require('wallpaper');
 
@@ -32,5 +33,6 @@ module.exports = async(options) => {
         throw new Error(err);
     }
 
+    await makeDir(options.dir);
     await wallpaper.set(imagePath, { scale: options.scale });
 };
