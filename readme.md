@@ -1,4 +1,4 @@
-# lorem-picsum-wallpaper
+# lorem-picsum-wallpaper [![NPM](https://nodei.co/npm/lorem-picsum-wallpaper.png?mini=true)](https://nodei.co/npm/lorem-picsum-wallpaper/)
 
 > Lorem Ipsum... but for wallpapers
 
