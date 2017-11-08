@@ -1,4 +1,4 @@
-# lorem-picsum-wallpaper
+# lorem-picsum-wallpaper [![NPM](https://nodei.co/npm/lorem-picsum-wallpaper.png?mini=true)](https://nodei.co/npm/lorem-picsum-wallpaper/)
 
 [![Build Status](https://travis-ci.org/the-pat/lorem-picsum-wallpaper.svg?branch=master)](https://travis-ci.org/the-pat/lorem-picsum-wallpaper)
 
