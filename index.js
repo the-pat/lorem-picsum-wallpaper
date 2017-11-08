@@ -5,6 +5,7 @@ const imageDownload = require('image-download');
 const imageType = require('image-type');
 const makeDir = require('make-dir');
 const path = require('path');
+const saveBuffer = require('save-buffer');
 const wallpaper = require('wallpaper');
 
 const defaults = {
@@ -20,20 +21,7 @@ module.exports = async(options) => {
     const buffer = await imageDownload(url);
     const type = imageType(buffer);
     const imagePath = path.join(options.dir, 'random.' + type.ext);
-    
-    await makeDir(options.dir);
 
-    const err = await new Promise((resolve, reject) => fs.writeFile(imagePath, buffer, (err) => {
-        if (err) {
-            return reject(err);
-        }
-
-        return resolve();
-    }));
-
-    if (err) {
-        throw new Error(err);
-    }
-
+    await saveBuffer(buffer, imagePath);
     await wallpaper.set(imagePath, { scale: options.scale });
 };

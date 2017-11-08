@@ -1,5 +1,7 @@
 # lorem-picsum-wallpaper
 
+[![Build Status](https://travis-ci.org/the-pat/lorem-picsum-wallpaper.svg?branch=master)](https://travis-ci.org/the-pat/lorem-picsum-wallpaper)
+
 > Lorem Ipsum... but for wallpapers
 
 ## Install
