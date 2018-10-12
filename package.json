@@ -7,7 +7,7 @@
   "author": {
     "name": "Patrick Tone",
     "email": "pt@patrickt.one",
-    "url": "patrickt.one"
+    "url": "https://patrickt.one"
   },
   "engines": {
     "node": ">=7.6"
@@ -32,6 +32,6 @@
     "wallpaper": "^2.5.0"
   },
   "devDependencies": {
-    "ava": "^0.23.0"
+    "ava": "^0.25.0"
   }
 }
